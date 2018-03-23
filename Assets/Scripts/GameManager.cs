@@ -8,9 +8,6 @@ using System.Xml;
 
 public class GameManager : MonoBehaviour
 {
-    public TextAsset LevelsXML;
-
-
     public float SpeedGame;
     public int TotalTracks;
     public int LimitTotalFoods;
@@ -32,22 +29,11 @@ public class GameManager : MonoBehaviour
         TotalFoods = 0;
         Tracks = new List<Track>();
 
-        ReadLevel();
-
         GenerateTracks();
 
         TxtLevelNumber.text = Level.ToString();
     }
 
-    private void ReadLevel()
-    {
-        string text = LevelsXML.text;
-
-        XmlDocument document = new XmlDocument();
-        document.LoadXml(text);
-
-
-    }
 
 
 
@@ -112,6 +98,7 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
 
     private void DetectTapFood()
     {

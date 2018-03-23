@@ -19,4 +19,9 @@
     <total>40</total>
     <good>20</good>
   </level>
+   <level>
+    <tracks>3</tracks>
+    <total>40</total>
+    <good>20</good>
+  </level>
 </levels>

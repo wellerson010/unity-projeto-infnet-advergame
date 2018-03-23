@@ -42,8 +42,10 @@ public class Food : MonoBehaviour {
         Track.EnableInsertFood();
     }
 
+    #if UNITY_EDITOR
     private void OnMouseDown()
     {
         GameObject.Find("GameManager").GetComponent<GameManager>().FoodClicked(gameObject);
     }
+    #endif
 }

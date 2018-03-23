@@ -164,7 +164,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 381fc02492324d844bcd3c33d3c38061, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.491}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -443,7 +443,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 009108262a740434a86bb10592e73eb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelsXML: {fileID: 4900000, guid: 7379e9028967099409b918161f3fe5b4, type: 3}
   SpeedGame: 0.5
   TotalTracks: 1
   LimitTotalFoods: 30
