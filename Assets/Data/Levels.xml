@@ -1,0 +1,22 @@
+<levels>
+  <level>
+    <tracks>1</tracks>
+    <total>10</total>
+    <good>8</good>
+  </level>
+  <level>
+    <tracks>2</tracks>
+    <total>20</total>
+    <good>10</good>
+  </level>
+  <level>
+    <tracks>3</tracks>
+    <total>40</total>
+    <good>20</good>
+  </level>
+  <level>
+    <tracks>3</tracks>
+    <total>40</total>
+    <good>20</good>
+  </level>
+</levels>

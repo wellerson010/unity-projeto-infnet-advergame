@@ -1,0 +1,877 @@
+fileFormatVersion: 2
+guid: a4efdff3ed10de54792657cdab5e9406
+timeCreated: 1521674632
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: JunkFood_0
+    21300002: JunkFood_1
+    21300004: JunkFood_2
+    21300006: JunkFood_3
+    21300008: JunkFood_4
+    21300010: JunkFood_5
+    21300012: JunkFood_6
+    21300014: JunkFood_7
+    21300016: JunkFood_8
+    21300018: JunkFood_9
+    21300020: JunkFood_10
+    21300022: JunkFood_11
+    21300024: JunkFood_12
+    21300026: JunkFood_13
+    21300028: JunkFood_14
+    21300030: JunkFood_15
+    21300032: JunkFood_16
+    21300034: JunkFood_17
+    21300036: JunkFood_18
+    21300038: JunkFood_19
+    21300040: JunkFood_20
+    21300042: JunkFood_21
+    21300044: JunkFood_22
+    21300046: JunkFood_23
+    21300048: JunkFood_24
+    21300050: JunkFood_25
+    21300052: JunkFood_26
+    21300054: JunkFood_27
+    21300056: JunkFood_28
+    21300058: JunkFood_29
+    21300060: JunkFood_30
+    21300062: JunkFood_31
+    21300064: JunkFood_32
+    21300066: JunkFood_33
+    21300068: JunkFood_34
+    21300070: JunkFood_35
+    21300072: JunkFood_36
+    21300074: JunkFood_37
+    21300076: JunkFood_38
+    21300078: JunkFood_39
+    21300080: JunkFood_40
+    21300082: JunkFood_41
+    21300084: JunkFood_42
+    21300086: JunkFood_43
+    21300088: JunkFood_44
+    21300090: JunkFood_45
+    21300092: JunkFood_46
+    21300094: JunkFood_47
+    21300096: JunkFood_48
+    21300098: JunkFood_49
+    21300100: JunkFood_50
+    21300102: JunkFood_51
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: JunkFood_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 590
+        width: 56
+        height: 50
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_1
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 588
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_2
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 594
+        width: 56
+        height: 50
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_3
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 588
+        width: 8
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_4
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 588
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_5
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 588
+        width: 56
+        height: 46
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_6
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 524
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_7
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 524
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_8
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 524
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_9
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 524
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_10
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 524
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_11
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 460
+        width: 56
+        height: 42
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_12
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 460
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_13
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 460
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_14
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 460
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_15
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 460
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_16
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 396
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_17
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 396
+        width: 54
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_18
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 396
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_19
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 396
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_20
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 396
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_21
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 332
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_22
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 332
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_23
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 332
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_24
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 332
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_25
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 332
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_26
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 268
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_27
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 268
+        width: 40
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_28
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 268
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_29
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 268
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_30
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 268
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_31
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 204
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_32
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 204
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_33
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 204
+        width: 56
+        height: 50
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_34
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 204
+        width: 52
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_35
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 204
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_36
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 140
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_37
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 140
+        width: 36
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_38
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 140
+        width: 56
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_39
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 140
+        width: 50
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_40
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 140
+        width: 10
+        height: 10
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_41
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 140
+        width: 38
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_42
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 76
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_43
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 76
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_44
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 76
+        width: 56
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_45
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 76
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_46
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 76
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_47
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 12
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_48
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 12
+        width: 56
+        height: 44
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_49
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 12
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_50
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 12
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: JunkFood_51
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 12
+        width: 56
+        height: 56
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
