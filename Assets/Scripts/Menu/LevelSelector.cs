@@ -16,10 +16,17 @@ public class LevelSelector : MonoBehaviour {
     [HideInInspector]
     public static LevelInfo LevelSelected;
 
+    [HideInInspector]
+    public static int LastLevelEnabled;
+
+    [HideInInspector]
+    public static IList<LevelInfo> Levels = new List<LevelInfo>();
+
     private XmlDocument Document = new XmlDocument();
 
     void Start()
     {
+        LastLevelEnabled = 1;
         ReadXMLLevels();
     }
 
@@ -33,7 +40,7 @@ public class LevelSelector : MonoBehaviour {
         GameObject gameObject = hit.transform.gameObject;
         if (gameObject.CompareTag("LevelButton"))
         {
-            GoToGame(gameObject.GetComponent<ButtonLevel>().Info);
+            gameObject.GetComponent<ButtonLevel>().Click();
         }
     }
 
@@ -47,29 +54,58 @@ public class LevelSelector : MonoBehaviour {
     {
         Document.LoadXml(LevelsXML.text);
         XmlNode nodeParent = Document.GetElementsByTagName("levels")[0];
+        Levels.Clear();
 
         BuildUILevels(nodeParent.ChildNodes);
     }
 
     private void BuildUILevels(XmlNodeList nodes)
     {
+        bool nextLevelEnabled = true;
+
         for (int i = 0; i < nodes.Count; i++)
         {
             XmlNode node = nodes[i];
             Button button = Instantiate(ButtonLevelSelector, ContainerLevels.transform);
 
-            int tracks = Convert.ToInt32(node.SelectSingleNode("tracks").Value);
-            int total = Convert.ToInt32(node.SelectSingleNode("total").Value);
-            int good = Convert.ToInt32(node.SelectSingleNode("good").Value);
+            int level = i + 1;
+
+            int starHighScore = PlayerPrefsService.GetStarsHighScoreFromLevel(level);
+            button.interactable = (nextLevelEnabled)?true:false;
+            
+            if (button.interactable)
+            {
+                LastLevelEnabled = level;
+            }
+
+            if (starHighScore > 0)
+            {
+                nextLevelEnabled = true;
+            }
+            else
+            {
+                nextLevelEnabled = false;
+            }
+
+            int tracks = Convert.ToInt32(node.SelectSingleNode("tracks").InnerText);
+            int total = Convert.ToInt32(node.SelectSingleNode("total").InnerText);
+            int good = Convert.ToInt32(node.SelectSingleNode("good").InnerText);
+            int speed = Convert.ToInt32(node.SelectSingleNode("speed").InnerText);
 
             LevelInfo levelInfo = new LevelInfo()
             {
-                Level = i+1,
+                Level = level,
                 TotalFoods = total,
-                TotalFoodsGood = good
+                TotalFoodsGood = good,
+                Speed = speed,
+                Tracks = tracks,
+                Stars = starHighScore
             };
+
+            Levels.Add(levelInfo);
 
             button.GetComponent<ButtonLevel>().Info = levelInfo;
         }
     }
+    
 }

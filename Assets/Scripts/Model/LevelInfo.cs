@@ -7,6 +7,8 @@ namespace Assets.Scripts.Model
 {
     public class LevelInfo
     {
+        public int Speed { get; set; }
+
         public int Level { get; set; }
 
         public int Tracks { get; set; }
@@ -14,6 +16,8 @@ namespace Assets.Scripts.Model
         public int TotalFoods { get; set; }
 
         public int TotalFoodsGood { get; set; }
+
+        public int Stars { get; set; }
 
     }
 }

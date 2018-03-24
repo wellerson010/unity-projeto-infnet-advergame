@@ -4,12 +4,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Food : MonoBehaviour {
-    public float Speed;
-    public FoodType Type;
     public List<Sprite> GoodFoods;
     public List<Sprite> BadFoods;
+
+    [HideInInspector]
+    public FoodType Type;
+
+    [HideInInspector]
     public bool CollidedWithCollider = false;
+
+    [HideInInspector]
     public Track Track;
+
+    [HideInInspector]
+    public float Speed;
 
     private SpriteRenderer Sprite;
 

@@ -384,6 +384,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextLevel: {fileID: 114321718082092320}
+  StarsEnabled:
+  - {fileID: 1812488511478456}
+  - {fileID: 1732158164302036}
+  - {fileID: 1636721173103900}
 --- !u!114 &114685851948882016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -567,7 +571,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 39.15, y: 39.15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224355180949314844
 RectTransform:
@@ -585,7 +589,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 39.15, y: 39.15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224457075581817980
 RectTransform:
@@ -625,7 +629,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 39.15, y: 39.15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224717765118489336
 RectTransform:

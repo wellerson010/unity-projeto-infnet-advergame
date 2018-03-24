@@ -3,6 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Assets.Scripts.Enum;
 
 public class Track : MonoBehaviour {
     public float Speed;
@@ -12,13 +13,20 @@ public class Track : MonoBehaviour {
     public GameObject Food;
     public IList<Food> Foods;
 
+    private GameManager GameManager;
     private float TimeLastFoodInserted = 0;
     private Renderer Renderer;
+
+    private void Awake()
+    {
+        GetComponent<Renderer>().sortingLayerName = "Game";
+    }
 
     private void Start()
     {
         Renderer = GetComponent<Renderer>();
         Foods = new List<Food>();
+        GameManager = FindObjectOfType<GameManager>();
 
       /*  float offsetInitial = Random.Range(0f, 1f);
         ChangeTextureOffset(offsetInitial);
@@ -43,7 +51,7 @@ public class Track : MonoBehaviour {
         Renderer.material.mainTextureOffset += pos;
     }
 
-    public Food InsertFood()
+    public Food InsertFood(FoodType type)
     {
         if (CanInsertFood)
         {
@@ -52,7 +60,7 @@ public class Track : MonoBehaviour {
             Food food = obj.GetComponent<Food>();
             food.Speed = Speed;
             food.Track = this;
-            food.Type = Assets.Scripts.Enum.FoodType.Bad;
+            food.Type = type;
 
             Foods.Add(food);
             CanInsertFood = false;
@@ -78,6 +86,8 @@ public class Track : MonoBehaviour {
 
     public void DeleteFood(Food food)
     {
+        GameManager.DeleteFood(food);
         Foods.Remove(food);
+        GameManager.VerifyFinished();
     }
 }

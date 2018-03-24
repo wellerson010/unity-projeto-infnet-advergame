@@ -5,37 +5,75 @@ using UnityEngine;
 using System.Linq;
 using UnityEngine.UI;
 using System.Xml;
+using Assets.Scripts.Model;
+using Assets.Scripts.Enum;
+using System;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public float SpeedGame;
-    public int TotalTracks;
-    public int LimitTotalFoods;
-    public int LimitFoodsGood;
-    public int Life;
+    public int ErrorsAllowed;
     public GameObject ContainerTrack;
     public GameObject Track;
+    public GameObject PanelResult;
     public GameType GameType;
-    public int Level;
+
 
     [Header("GUI")]
     public Text TxtLevelNumber;
 
-    private int TotalFoods;
+  
+    private float SpeedGame;
+    private int Level;
+    private int TotalTracks;
+    private int LimitTotalFoods;
+    private int LimitFoodsGood;
+    private LevelInfo LevelInfo;
+    private bool GameFinished;
+    private int TotalFoodsCreated;
+    private int TotalGoodFoodsClicked;
+    private int TotalBadFoodsClicked;
     private IList<Track> Tracks;
+    private IList<Food> Foods;
+    private IList<FoodType> FoodsToCreated;
 
     void Start()
     {
-        TotalFoods = 0;
+        Foods = new List<Food>();
         Tracks = new List<Track>();
 
+       // FindObjectOfType<SoundManager>().SourceMusic.volume = 0.5f;
+
+        PrepareLevel();
+
+        PrepareFoods();
         GenerateTracks();
 
         TxtLevelNumber.text = Level.ToString();
     }
 
+    private void OnDestroy()
+    {
+     //   FindObjectOfType<SoundManager>().SourceMusic.volume = 1;
+    }
 
+    private void PrepareLevel()
+    {
+        LevelInfo = LevelSelector.LevelSelected;
+        PanelResult.SetActive(false);
 
+        if (LevelInfo == null)
+        {
+            SceneManager.LoadScene("Menu");
+            return;
+        }
+
+        TotalTracks = LevelInfo.Tracks;
+        Level = LevelInfo.Level;
+        LimitTotalFoods = LevelInfo.TotalFoods;
+        LimitFoodsGood = LevelInfo.TotalFoodsGood;
+        SpeedGame = (float)LevelInfo.Speed / 10;
+    }
 
     private void GenerateTracks()
     {
@@ -55,13 +93,26 @@ public class GameManager : MonoBehaviour
 
             float positionY = -0.5f + (part * (i - 1)) + half;
 
-            gameObject.transform.localPosition = new Vector3(0, positionY, 0);
+            gameObject.transform.localPosition = new Vector3(0, positionY, -0.1f);
 
             Tracks.Add(track);
         }
     }
 
-    void ClearGrid()
+    private void PrepareFoods()
+    {
+        FoodsToCreated = Enumerable.Range(0, LimitTotalFoods).Select(x => FoodType.Bad).ToList();
+
+        var random = new System.Random();
+        IList<int> indexGoodFood = Enumerable.Range(0, LimitTotalFoods).OrderBy(x => random.Next()).Take(LimitFoodsGood).ToList();
+
+        for (int i = 0; i < indexGoodFood.Count; i++)
+        {
+            FoodsToCreated[indexGoodFood[i]] = FoodType.Good;
+        }
+    }
+
+    private void ClearGrid()
     {
         foreach (Track track in Tracks)
         {
@@ -73,13 +124,16 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        DetectTapFood();
-
-        switch (GameType)
+        if (!GameFinished)
         {
-            case GameType.Limit:
-                UpdateGameModeLimit();
-                break;
+            DetectTapFood();
+
+            switch (GameType)
+            {
+                case GameType.Limit:
+                    UpdateGameModeLimit();
+                    break;
+            }
         }
     }
 
@@ -87,22 +141,22 @@ public class GameManager : MonoBehaviour
     {
         foreach (Track track in Tracks)
         {
-            if (track.CanInsertFood && TotalFoods <= LimitTotalFoods)
+            if (track.CanInsertFood && TotalFoodsCreated < LimitTotalFoods)
             {
-                Food food = track.GetComponent<Track>().InsertFood();
-                
+                Food food = track.GetComponent<Track>().InsertFood(FoodsToCreated[TotalFoodsCreated]);
+
                 if (food != null)
                 {
-                    TotalFoods++;
+                    Foods.Add(food);
+                    TotalFoodsCreated++;
                 }
             }
         }
     }
 
-
     private void DetectTapFood()
     {
-        for(int i=0; i < Input.touchCount; i++)
+        for (int i = 0; i < Input.touchCount; i++)
         {
             Touch touch = Input.GetTouch(i);
             if (touch.phase == TouchPhase.Began)
@@ -127,6 +181,21 @@ public class GameManager : MonoBehaviour
         {
             foodNotCollided = true;
         }
+        //IMPEDIR DE CLICAR EM FOOD QND TERMINAR O JOGO
+        if (food.Type == FoodType.Bad)
+        {
+            TotalBadFoodsClicked++;
+
+            if (TotalBadFoodsClicked > ErrorsAllowed)
+            {
+                GameFinished = true;
+                PanelResult.GetComponent<PanelResult>().SetScore(Score.Bad, LevelInfo.Level);
+            }
+        }
+        else
+        {
+            TotalGoodFoodsClicked++;
+        }
 
         food.Track.DeleteFood(food);
 
@@ -136,5 +205,49 @@ public class GameManager : MonoBehaviour
         {
             food.Track.EnableInsertFood();
         }
+    }
+
+    public void VerifyFinished()
+    {
+        if (LimitTotalFoods == TotalFoodsCreated && Foods.Count == 0)
+        {
+            CalculateScore();
+        }
+    }
+
+    public void CalculateScore()
+    {
+        //Garantir que números impares, arredonde para cima. 
+        //Ex: (9 / 2 ) + (9 % 2) = 4 + 1 = 5
+        //Ex: (8 / 2 ) + (8 % 2) = 4 + 0 = 4
+        int halfGood = (LimitFoodsGood / 2) + (LimitFoodsGood % 2);
+
+        Score score = Score.Bad;
+
+        if (TotalGoodFoodsClicked == LimitFoodsGood)
+        {
+            score = Score.Awesome;
+        }
+        else if (TotalGoodFoodsClicked >= halfGood)
+        {
+            float perc = ((float)TotalGoodFoodsClicked * 100f) / (float)LimitFoodsGood;
+
+            if (perc >= 70)
+            {
+                score = Score.Good;
+            }
+            else
+            {
+                score = Score.Ok;
+            }
+        }
+
+        GameFinished = true;
+        PanelResult.GetComponent<PanelResult>().SetScore(score, LevelInfo.Level);
+    }
+
+    public void DeleteFood(Food food)
+    {
+        Foods.Remove(food);
     }
 }
