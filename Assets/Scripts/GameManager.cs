@@ -36,12 +36,13 @@ public class GameManager : MonoBehaviour
     private IList<Track> Tracks;
     private IList<Food> Foods;
     private IList<FoodType> FoodsToCreated;
+    private bool GameOver;
 
     void Start()
     {
         Foods = new List<Food>();
         Tracks = new List<Track>();
-
+        GameOver = false;
        // FindObjectOfType<SoundManager>().SourceMusic.volume = 0.5f;
 
         PrepareLevel();
@@ -173,6 +174,11 @@ public class GameManager : MonoBehaviour
 
     public void FoodClicked(GameObject objectFood)
     {
+        if (GameFinished)
+        {
+            return;
+        }
+
         Food food = objectFood.GetComponent<Food>();
 
         bool foodNotCollided = false;
@@ -189,6 +195,7 @@ public class GameManager : MonoBehaviour
             if (TotalBadFoodsClicked > ErrorsAllowed)
             {
                 GameFinished = true;
+                GameOver = true;
                 PanelResult.GetComponent<PanelResult>().SetScore(Score.Bad, LevelInfo.Level);
             }
         }
@@ -209,8 +216,9 @@ public class GameManager : MonoBehaviour
 
     public void VerifyFinished()
     {
-        if (LimitTotalFoods == TotalFoodsCreated && Foods.Count == 0)
+        if (LimitTotalFoods == TotalFoodsCreated && Foods.Count == 0 && !GameOver)
         {
+            GameFinished = true;
             CalculateScore();
         }
     }
